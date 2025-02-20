@@ -9,11 +9,11 @@ dotenv.config();
 const app = express();
 
 // CORS Configuration (allow only specific domains for security)
-const corsOptions = {
-    origin: ['http://localhost:3000', 'https://yourfrontend.com'], // Update with your frontend domain
+app.use(cors({
+    origin: process.env.FRONTEND_URL || "http://localhost:3000",
     credentials: true,
-};
-app.use(cors(corsOptions));
+}));
+
 
 // Middleware
 app.use(express.json());
