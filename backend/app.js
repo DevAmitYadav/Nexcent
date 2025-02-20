@@ -8,32 +8,33 @@ import authRoutes from './routes/authRoutes.js';
 dotenv.config();
 const app = express();
 
-// CORS Configuration (Fix Preflight Requests)
+// ✅ Allow All CORS (Temporarily for Debugging)
 app.use(cors({
-    origin: "*",  // ⚠️ Allow all origins temporarily
+    origin: "*",
     credentials: true,
 }));
 
-
-// Manually Handle Preflight Requests for Security
+// ✅ Handle Preflight Requests
 app.options("*", (req, res) => {
-    res.header("Access-Control-Allow-Origin", process.env.FRONTEND_URL || "http://localhost:3000");
+    res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     res.sendStatus(200);
 });
 
-// Middleware
-app.use(express.json());
-app.use(morgan('dev')); 
+// ✅ Middleware
+app.use(express.json());  // Parse JSON data
+app.use(morgan('dev'));   // Log requests
 
-// Routes
-app.use('/api/auth', authRoutes);
+// ✅ API Routes
+app.use('/api/auth', authRoutes);  // Prefix all auth routes with `/api/auth`
+
+// ✅ Default Route
 app.get('/', (req, res) => {
     res.send('<h1>Welcome to the Authentication API</h1>');
 });
 
-// Database Connection
+// ✅ MongoDB Connection
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -44,6 +45,6 @@ mongoose.connect(process.env.MONGO_URI, {
     process.exit(1);
 });
 
-// Start Server
+// ✅ Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
