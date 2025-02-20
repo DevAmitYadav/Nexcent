@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.final-container {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 2rem auto; /* Adds some spacing from top & bottom */
+}
+
+.final-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem; /* Ensures spacing between text and button */
+}
+
+.final-button {
+  background-color: #38a169;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto; /* Centers the button */
+}
+
+.final-button:hover {
+  background-color: #2f855a;
+}

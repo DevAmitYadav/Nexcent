@@ -1,0 +1,39 @@
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .dashboard-box {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .logout-button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #ff4757;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #e84118;
+  }
+  

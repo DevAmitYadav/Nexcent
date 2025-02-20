@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 16px; /* Adds balanced top & bottom spacing */
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 40px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.text-section {
+  flex: 1;
+  max-width: 50%;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #10b981;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.register-button {
+    background-color: #f5f5dc; /* Beige color */
+    color: #333; /* Dark text for contrast */
+    padding: 3px 6px; /* Half the previous padding */
+    border-radius: 4px; /* Slightly smaller border-radius */
+    border: 1px solid #d1d5db;
+    cursor: pointer;
+    font-size: 0.5rem; /* Half the previous font size */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .register-button:hover {
+    background-color: #e0d5b7; /* Slightly darker beige on hover */
+  }
+  
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+}
+
+.illustration {
+  width: 90%;
+  max-width: 350px; /* Ensures a reasonable image size */
+  height: auto;
+  margin-left: auto;
+}

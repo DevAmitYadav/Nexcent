@@ -1,0 +1,173 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e7f0f8; /* Soft Beige-Blue Background */
+}
+
+/* Ensure proper layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Background Colors */
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+/* New Soft Beige-Blue Background for Sections */
+.bg-soft-blue {
+  background-color: #e7f0f8; /* Light Beige-Blue */
+}
+
+/* Padding & Margin */
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Typography */
+.text-center {
+  text-align: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: bold;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-gray-900 {
+  color: #1a202c;
+}
+
+.text-green-600 {
+  color: #16a34a;
+}
+
+/* Grid Fix */
+.grid {
+  display: grid;
+  gap: 20px; /* Ensures spacing between grid items */
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 640px) {
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Button Fix */
+button {
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* 🔥 Improved Alignment for Images & Text */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .md\:flex-row {
+    flex-direction: row;
+  }
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+/* Section Styling with Soft Background */
+.section {
+  padding: 40px 0;
+  background-color: #e7f0f8; /* Soft Beige-Blue */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 🔥 Image & Text Section Fix */
+.image-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .image-text-container {
+    flex-direction: row;
+  }
+
+  .image-text-container img {
+    width: 50%;
+    max-width: 400px;
+  }
+
+  .image-text-container .text-content {
+    width: 50%;
+  }
+}
+.final-button:hover {
+    background-color: #2f855a;
+  }
+  

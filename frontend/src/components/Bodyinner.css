@@ -1,0 +1,58 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Ensure Image is on Left and Text on Right */
+@media (min-width: 768px) {
+  .flex-row {
+    flex-direction: row; /* Side by side on large screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .flex-col {
+    flex-direction: column; /* Stack items on mobile */
+  }
+}
+
+/* Image Styling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Text Styling */
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: bold;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-gray-900 {
+  color: #1a202c;
+}
+
+.text-gray-600 {
+  color: #718096;
+}
+
+.text-green-600 {
+  color: #16a34a;
+}
+
+/* Button Styling */
+button {
+  transition: background-color 0.3s ease;
+}

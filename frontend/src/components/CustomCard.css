@@ -1,0 +1,104 @@
+.customer-card {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  background-color: #f0f4f8;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  gap: 2rem;
+}
+
+/* Image Section */
+.customer-image {
+  flex: 0 0 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.customer-image img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Content Section */
+.customer-content {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.description {
+  font-size: 1rem; /* Reduced font size */
+  color: #333;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.name {
+  font-size: 1.2rem; /* Reduced font size */
+  font-weight: bold;
+}
+
+.association {
+  font-size: 1rem; /* Reduced font size */
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Logos */
+.logos {
+  display: flex;
+  gap: 12px;
+  margin-top: 0.8rem;
+}
+
+.company-logo {
+  width: 40px; /* Slightly reduced */
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Meet Customers Link */
+.meet-customers {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.9rem; /* Reduced font size */
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.meet-customers i {
+  margin-left: 5px;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .customer-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .customer-image {
+    flex: none;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .customer-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .logos {
+    justify-content: center;
+  }
+}

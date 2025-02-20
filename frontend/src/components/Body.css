@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+body {
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+.w-full {
+  width: 100%;
+}
+
+.md-w-1-2{
+  width: 50%;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.md\\:mt-0 {
+  margin-top: 0;
+}
+
+.md\\:ml-8 {
+  margin-left: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.md\\:text-left {
+  text-align: left;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-gray-800 {
+  color: #2d3748;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.text-gray-600 {
+  color: #718096;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.bg-green-500 {
+  background-color: #48bb78;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.hover\\:bg-green-600:hover {
+  background-color: #38a169;
+}
+
+.final-button:hover {
+    background-color: #2f855a;
+  }
+  
