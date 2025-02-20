@@ -9,18 +9,11 @@ dotenv.config();
 const app = express();
 
 // CORS Configuration (Fix Preflight Requests)
-const allowedOrigins = [process.env.FRONTEND_URL || "http://localhost:3000"];
-
 app.use(cors({
-    origin: (origin, callback) => {
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error("CORS Not Allowed"));
-        }
-    },
-    credentials: true, // Allow cookies & headers
+    origin: "*",  // ⚠️ Allow all origins temporarily
+    credentials: true,
 }));
+
 
 // Manually Handle Preflight Requests for Security
 app.options("*", (req, res) => {
