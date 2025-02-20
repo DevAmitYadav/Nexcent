@@ -8,22 +8,31 @@ import authRoutes from './routes/authRoutes.js';
 dotenv.config();
 const app = express();
 
-// CORS Configuration (allow only specific domains for security)
-app.use((req, res, next) => {
+// CORS Configuration (Fix Preflight Requests)
+const allowedOrigins = [process.env.FRONTEND_URL || "http://localhost:3000"];
+
+app.use(cors({
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("CORS Not Allowed"));
+        }
+    },
+    credentials: true, // Allow cookies & headers
+}));
+
+// Manually Handle Preflight Requests for Security
+app.options("*", (req, res) => {
     res.header("Access-Control-Allow-Origin", process.env.FRONTEND_URL || "http://localhost:3000");
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-    res.header("Access-Control-Allow-Credentials", "true");
-  
-    if (req.method === "OPTIONS") {
-      return res.sendStatus(200);
-    }
-    next();
+    res.sendStatus(200);
 });
 
 // Middleware
 app.use(express.json());
-app.use(morgan('dev')); // Logs requests in the console
+app.use(morgan('dev')); 
 
 // Routes
 app.use('/api/auth', authRoutes);
@@ -31,7 +40,7 @@ app.get('/', (req, res) => {
     res.send('<h1>Welcome to the Authentication API</h1>');
 });
 
-// Database Connection with Error Handling
+// Database Connection
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -39,7 +48,7 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log('✅ MongoDB Connected'))
 .catch(err => {
     console.error('❌ MongoDB Connection Error:', err);
-    process.exit(1); // Exit the application if DB connection fails
+    process.exit(1);
 });
 
 // Start Server
